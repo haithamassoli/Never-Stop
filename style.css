@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.pr {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 100000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  cursor: pointer;
+}
+
+.header i {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+  transition: 0.5s;
+  z-index: 10000;
+}
+.header .fas.active {
+  height: 100vh;
+  background-color: #fff;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header i:hover {
+  /* color: rgba(88, 174, 255); */
+  font-size: 1.5em;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlaye {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(88, 174, 255, 0.774);
+  mix-blend-mode: overlay;
+}
+
+.containr {
+  position: absolute;
+  top: 30%;
+  left: 12%;
+  z-index: 2;
+}
+
+.containr h2 {
+  font-size: 5em;
+  font-weight: 800;
+}
+
+.containr h3 {
+  font-size: 4em;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.containr p {
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .containr h2 {
+    font-size: 5em;
+    font-weight: 600;
+  }
+  .containr h3 {
+    font-size: 4em;
+    font-weight: 400;
+  }
+}
+.icon {
+  position: absolute;
+  display: flex;
+  color: white;
+  font-size: 2em;
+  top: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon i {
+  margin: 20px;
+  position: relative;
+  left: 100px;
+  top: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.icon i:hover {
+  content: "";
+  transform: translateY(-20px);
+}
+
+.containr.active {
+  right: 300px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul {
+  position: relative;
+  z-index: 1;
+}
+
+.menu ul li {
+  top: 50px;
+  text-align: right;
+  margin: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  color: #333;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.menu ul li:hover {
+  color: rgba(88, 174, 255);
+}
+
+.menu .ul.active {
+  z-index: 10;
+}
